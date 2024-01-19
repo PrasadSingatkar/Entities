@@ -1,0 +1,33 @@
+@using APP.models;
+
+<h3>User : </h3>
+
+@{
+    List<User> users = (List<User>)TempData["allUsers"];
+}
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Details</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+
+    @{
+        foreach(User u in users){
+            <tr>
+                <td>@u.userId</td>
+                <td>@u.userName</td>
+                <td>@u.userEmail</td>
+                <td>@u.userAddress</td>
+                <td> <a href="/User/Details/@u.userId"> <button class="btn btn-primary">Details</button> </a> </td>
+                <td> <a href="/User/Delete/@u.userId"> <button class="btn btn-danger">Delete</button> </a></td>
+                <td> <a href="/User/UpdateUser/@u.userId"> <button class="btn btn-success">Update</button> </a></td>
+            </tr>
+        }
+    }
+</table>

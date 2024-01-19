@@ -1,0 +1,38 @@
+<form method="post" asp-controller="User" asp-action="AddUser">
+    <table class="table">
+        <tr>
+            <th>User ID : </th>
+            <td>
+                <input type="number" name="id">
+            </td>
+        </tr>
+
+         <tr> 
+            <th>User Name : </th>
+            <td>
+                <input type="text" name="name">
+            </td>
+        </tr>  
+
+        <tr>
+            <th>User Email : </th>
+            <td>
+                <input type="email" name="email">
+            </td>
+        </tr>
+
+        <tr>
+            <th>User Address :</th>
+            <td>
+                <input type="text" name="address">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-primary">Add User</button>
+            </td>
+        </tr>
+        
+    </table>
+</form>

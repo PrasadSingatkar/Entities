@@ -1,0 +1,40 @@
+@using APP.models;
+
+<form method="post" asp-controller="User" asp-action="UpdateUser">
+    <table class="table">
+        <tr>
+            <th>User ID : </th>
+            <td>
+                <input type="number" name="id" value="@Model.userId" readonly>
+            </td>
+        </tr>
+
+         <tr> 
+            <th>User Name : </th>
+            <td>
+                <input type="text" name="name" value="@Model.userName">
+            </td>
+        </tr>  
+
+        <tr>
+            <th>User Email : </th>
+            <td>
+                <input type="email" name="email" value="@Model.userEmail">
+            </td>
+        </tr>
+
+        <tr>
+            <th>User Address :</th>
+            <td>
+                <input type="text" name="address" value="@Model.userAddress">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </td>
+        </tr>
+        
+    </table>
+</form>
